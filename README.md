@@ -6,11 +6,11 @@ Página web desarrollada durante los cursos de arquitectura frontend en Platzi.c
 
 + **Primera Versión:**
 
-    Se desarrolló durante el [Curso de Resposive Desing](https://platzi.com/clases/responsive-design/), dirigido por Leonidas Esteban. Esta primera versión no tiene un diseño resposive, asi que no esta optimizada para las resoluciones manejasdas por smartphones.
+    Se desarrolló durante el [[Curso de Desarrollo Web Online](https://platzi.com/clases/html5-css3/), dirigido por Leonidas Esteban. Esta primera versión no tiene un diseño resposive, asi que no esta optimizada para las resoluciones manejasdas por smartphones.
 	
 + **Segunda Versión:**
 
-    Se desarrolló durante el [Curso de Desarrollo Web Online](https://platzi.com/clases/html5-css3/), dirigido por Leonidas Esteban.  Esta versión tiene un diseño responsive, optimizado solo para pantallas de smartphones menores a los 360px de ancho, quedando pendiente para su codificación  las pantallas entre los 360 px y 1024 px (Tablets).
+    Se desarrolló durante el [Curso de Resposive Desing](https://platzi.com/clases/responsive-design/), dirigido por Leonidas Esteban.  Esta versión tiene un diseño responsive, optimizado solo para pantallas de smartphones menores a los 360px de ancho, quedando pendiente para su codificación  las pantallas entre los 360 px y 1024 px (Tablets).
 	
 ## Herramientas usadas:
 
@@ -23,7 +23,7 @@ Página web desarrollada durante los cursos de arquitectura frontend en Platzi.c
 
 	+ [Pandao](https://pandao.github.io/editor.md/en.html)
 	
-+ **Colecciones de Emojis:  🐳 **
++ **Colecciones de Emojis:** 🐳
 
 	+ [getemoji](https://getemoji.com/) 
 
