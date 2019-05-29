@@ -288,19 +288,10 @@ h2{
   align-items: center;
 }
 
-.social-link{
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  /* tamaño del fondo */
-  background-size: 40px 40px;
-  margin: 0 10px;
-}
-
 .red_social{
-    font-size: 4em;
+  font-size: 2.5em;
+  padding: 10px;
 }
-
 
 /* HERE ENDS THE CONTACTO */
 /* ===================== */
@@ -316,7 +307,7 @@ h2{
     align-items: center;
 }
 .pie_descripcion img{
-    height: 1.2em;
+    height: 1.5em;
     padding-left: 1em;
 }
 
