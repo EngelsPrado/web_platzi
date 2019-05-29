@@ -1,17 +1,46 @@
 body{
   margin: 0px;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fafafa;
 }
+
+html{
+  margin: 0px;
+}
+
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  /* Centra el icono del menú */
+  align-items: center;
+  justify-content: center;
+  /* === */
+  /* Posicionando Icono del menú*/
+  position: fixed;
+  z-index: 4;
+  left: 10px;
+  top: 10px;
+  color: white;
+  /* === */
+}
+
+/* HERE THE HEADER STARTS */
 
 .cabecera{
   background-color:  #1C2029;
-  height: 70px;
+  height: auto;
   display: flex;
   align-items: center;
 }
 
 .container{
-  width: 1000px;
+  /* Máximo valor del ancho:*/
+  max-width: 1000px;
+  /* Toma todo el ancho del elemento padre: */
+  flex: 1;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -21,7 +50,11 @@ body{
 
 .logo{
   margin: 0px;
-  display: inherit;
+  height: 60px;
+}
+
+.logo img{
+  height: 100%;
 }
 
 .menu ol{
@@ -34,6 +67,12 @@ body{
   padding: 0 10px;
   text-decoration: none;
 }
+
+/* HERE ENDS THE HEADER */
+
+/* =========== =========*/
+
+/* HERE THE HERO STARS */
 
 .hero{
   background-color: #1C2029;
@@ -51,6 +90,7 @@ h1, h2, h3, h4{
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
 }
+
 h1{
   color: white;
   font-size: 40px;
@@ -61,8 +101,12 @@ h1{
 }
 
 .container h1 strong {
-  color: #026fff;
+  color: #0a8ecd;
 }
+
+/* HERE ENDS THE HERO */
+/* ================== */
+/* HERE THE PORTAFOLIO STARTS */
 
 h2{
   color: #026fff;
@@ -74,12 +118,10 @@ h2{
 
 .portafolio{
   background: #fafafa;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 }
 
 .project{
-  box-sizing: border-box;
-  width: inherit;
   background-color: white;
   border:1px solid gray;
   border-radius: 10px;
@@ -91,8 +133,7 @@ h2{
 }
 
 .project-details{
-  box-sizing: border-box;
-  width: 500px;
+  width: 50%;
 }
 
 .project-title{
@@ -108,28 +149,66 @@ h2{
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
   margin: 0;
 }
 
+/* HERE ENDS THE PORTAFOLIO */
+/* ======================== */
+/* HERE THE EVENTOS STARTS */
+
+.event-list-title {
+  margin-left: 10px;
+}
+
+.event-list{
+  background-color: #fafafa;
+}
 
 .event{
-  margin: 10px;
-  width: 480px;
-  flex-shrink: 0;
+  background: #fafafa;
+  margin: 1%;
+  width: 48%;
   overflow: hidden;
   border-radius: 10px;
-  background: #f4fbff;
+  background: #e4eef4;
+  z-index: 0;
 }
 
 .event-imageContainer{
   margin:0;
 }
 
-.event-image{
-  width: 480px;
-  height: 200px;
-  object-fit: cover;
+.multimedia{
+  width: 100%;
+  height: 0;
+  /* padding-top: (h/w)*100
+     h = Alto del video.
+     w = Ancho del video.
+  */
+  padding-top: 56.25%;
+  background: black;
+  position: relative;
+}
+
+.html-video{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-video{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .event-detail{
@@ -140,27 +219,52 @@ h2{
   position: relative;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-image{
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
 }
 
 .event-url{
-  color: #056fff;
-  border:1px solid;
+  color: #0a8ecd;
+  border:1.5px solid;
   padding: 5px 20px;
   text-decoration: none;
   border-radius: 5px;
+  font-weight:700;
 }
 
+/* HERE ENDS THE EVENTOS */
+/* ===================== */
+/* HERE THE CONTACT STARTS */
+
 .contact{
-  background-color: #056fff;
+  background-color: #0a8ecd;
   color: white;
-  /* height: 160px; */
-  display: flex;
+}
+
+.form-email{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-email h3{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-email input{
   background-image: url(../img/envelope.svg);
-  background-size: 15px 15px; 
-  background-repeat: no-repeat; 
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 5px;
   padding: 10px 20px 10px 25px;
@@ -179,10 +283,6 @@ h2{
   margin: 10px 0px;
 }
 
-.form-email h3{
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .social{
   display: flex;
   align-items: center;
@@ -190,40 +290,318 @@ h2{
 
 .social-link{
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   /* tamaño del fondo */
-  background-size: 50px 50px; 
+  background-size: 40px 40px;
   margin: 0 10px;
 }
 
-.social-link.twitter{
-  background-image: url('../img/twitter.svg');
+.red_social{
+    font-size: 4em;
 }
 
-.social-link.facebook{
-  background-image: url('../img/facebook.svg');
-}
 
-.social-link.github{
-  background-image: url('../img/github.svg');
-}
-
-.social-link.instagram{
-  background-image: url('../img/instagram.svg');
-}
+/* HERE ENDS THE CONTACTO */
+/* ===================== */
+/* HERE THE FOOTER STARTS */
 
 .pie_pagina{
-  background-color: #1b2127;
-  color: white;
+    background: #1C2029;
+    color: white;
 }
 
-.pie_pagina img{
-  /* Alineamiento vertical de un elemento */
-  vertical-align: middle;
-  margin: 0px 10px;
+.pie_descripcion{
+    display: flex;
+    align-items: center;
+}
+.pie_descripcion img{
+    height: 1.2em;
+    padding-left: 1em;
 }
 
 .pie_pagina a{
-  color:white;
+    color: white;
+}
+
+/* HERE ENDS THE FOOTER */
+/* ===================== */
+/* HERE THE ICONS STARTS */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?eqot84');
+  src:  url('../fonts/icomoon.eot?eqot84#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?eqot84') format('truetype'),
+    url('../fonts/icomoon.woff?eqot84') format('woff'),
+    url('../fonts/icomoon.svg?eqot84#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e900";
+}
+.icon-brand:before {
+  content: "\e900";
+}
+.icon-octacat:before {
+  content: "\e900";
+}
+.icon-social:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\e901";
+}
+.icon-brand1:before {
+  content: "\e901";
+}
+.icon-tweet:before {
+  content: "\e901";
+}
+.icon-social1:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-brand3:before {
+  content: "\e902";
+}
+.icon-social3:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-brand2:before {
+  content: "\e903";
+}
+.icon-social2:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+.icon-hamburger:before {
+  content: "\e904";
+}
+
+/* HERE ENDS THE ICONS */
+/* ===================== */
+/* HERE THE MEDIA QUERIES STARTS */
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 360px){
+
+  .burger-button{
+    display: flex;
+  }
+
+  .menu{
+    position: fixed;
+    background: rgba(5, 111, 255, 0.95);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .menu.is-active{
+    left: 0;
+  }
+
+
+/* HERE THE HEADER STARTS */
+
+  .cabecera .container{
+    flex-direction: column;
+  }
+
+  .logo{
+    padding-top: 0px;
+  }
+
+  .menu ol{
+    padding:0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ol li{
+    color: white;
+    padding: 0.4em 0;
+    font-size: 2em;
+    text-decoration: underline;
+  }
+
+  /* HERE ENDS THE HEADER */
+  /* ===================== */
+  /* HERE THE HERO STARTS */
+
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 1em;
+  }
+
+  h1{
+    font-size: 1.3em;
+    z-index: 2;
+    text-shadow: 1px 2px 2px #000;
+  }
+
+  .hero-image{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: opacity(80%) blur(1px);
+  }
+
+  /* HERE ENDS THE HERO */
+  /* ===================== */
+  /* HERE THE PORTAFOLIO STARTS */
+
+  .portafolio{
+    padding: 0px 10px 0 10px;
+  }
+
+  .portafolio .container{
+    justify-content: center;
+  }
+
+  .portafolio .container h2{
+    font-size: 20px;
+  }
+
+  .project{
+    flex-direction: column;
+    width: auto;
+  }
+
+  .project-details{
+    width: auto;
+    font-size: 16px;
+  }
+
+  .project-title{
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  .project-course{
+    font-size: 1.2em;
+    margin: 0.2em 0;
+  }
+
+  .project-date{
+    font-size: 1em;
+    margin: 0.2em 0;
+  }
+
+  .project-url {
+    font-size: 1em;
+    margin: 0.2em 0;
+  }
+
+  .project-description{
+    font-size: 0.9em;
+  }
+
+  .project-imageContainer {
+    width: auto;
+  }
+
+  /* EVENTOS */
+
+  .event-list{
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .event-list-title {
+    margin: auto;
+    font-size: 20px;
+  }
+
+  .event{
+    width: auto;
+    margin: 10px 0 10px 0;
+  }
+
+  .event-image{
+    width: 100%;
+  }
+
+  .event-detail{
+    background-color: white;
+    margin:20px 10px;
+    margin-top: -40px;
+  }
+
+  /* HERE ENDS EVENTOS */
+  /* ===================== */
+  /* HERE THE PIE CONTACTOS */
+
+  .contact{
+    padding-bottom: 1em;
+  }
+
+  .contact .container{
+    justify-content: center;
+  }
+
+  .form-email{
+    text-align: center;
+  }
+
+  .form-email button{
+    margin: 1em auto;
+  }
+
+  /* HERE ENDS CONTACTOS */
+  /* ===================== */
+  /* HERE THE PIE DE PÁGINA STARTS */
+
+  .pie_descripcion{
+    flex-direction: column;
+  }
+
+  .pie_descripcion img{
+      height: 2em;
+  }
+
+  .pie_pagina .container{
+    justify-content: center;
+  }
+ 
 }
