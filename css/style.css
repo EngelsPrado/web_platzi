@@ -400,8 +400,96 @@ h2{
 
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 767px){
 
+ .hero-image{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+ }
+
+ .portafolio{
+  background: #fafafa;
+  padding: 20px 20px 0px 20px;
+  margin-top: 12%;
+ }
+
+ .event-detail {
+  background-color: white;
+  margin: 20px 40px;
+  
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 100%;
+  flex: 1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-email {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+}
+.social {
+  display: flex;
+  padding: 3%;
+  align-items: center;
+}
+
+}
+
+@media screen and (max-width:425px){
+
+  .hero-image{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+   }
+  
+   .portafolio{
+    background: #fafafa;
+    padding: 20px 20px 0px 20px;
+    margin-top: 66%;
+   }
+
+   .event {
+    background: #fafafa;
+    margin: 1%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e4eef4;
+    z-index: 0;
+}
+
+.container {
+  max-width: 100%;
+  flex: 1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ .form-email button {
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px auto;
+}
 }
 
 @media screen and (max-width: 360px){
@@ -594,5 +682,4 @@ h2{
   .pie_pagina .container{
     justify-content: center;
   }
- 
 }
